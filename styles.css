@@ -1,153 +1,80 @@
-    :root {
-        --primary-color: #1a6b8a;
-        --secondary-color: #0d4b63;
-        --accent-color: #f8b400;
-        --light-color: #f5f5f5;
-        --dark-color: #333;
-    }
-    
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        overflow-x: hidden;
-    }
-    
-    .bg-primary-custom {
-        background-color: var(--primary-color);
-    }
-    
-    .bg-secondary-custom {
-        background-color: var(--secondary-color);
-    }
-    
-    .text-accent {
-        color: var(--accent-color);
-    }
-    
-    .btn-custom {
-        background-color: var(--accent-color);
-        color: var(--dark-color);
-        font-weight: 600;
-        padding: 10px 25px;
-        border-radius: 30px;
-        transition: all 0.3s;
-    }
-    
-    .btn-custom:hover {
-        background-color: #e0a800;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .navbar {
-        transition: all 0.3s;
-        padding: 15px 0;
-    }
-    
-    .navbar.scrolled {
-        padding: 10px 0;
-        background-color: rgba(26, 107, 138, 0.9) !important;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .hero-section {
-        background: linear-gradient(rgba(13, 75, 99, 0.2), rgba(13, 75, 99, 0.1)), 
-                    url('images/core.jpg') center/cover no-repeat;
-        background-size: cover;
-        min-height: 100vh;
-        color: white;
-        display: flex;
-        align-items: center;
-    }
-    
-    .section-padding {
-        padding: 100px 0;
-    }
-    
-    .feature-icon {
-        font-size: 2.5rem;
-        color: var(--accent-color);
-        margin-bottom: 20px;
-    }
-    
-    .glass-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 10px;
-        padding: 30px;
-        transition: all 0.3s;
-        height: 100%;
-    }
-    
-    .glass-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .gallery-item {
-        overflow: hidden;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    
-    .gallery-item img {
-        transition: all 0.5s;
-    }
-    
-    .gallery-item:hover img {
-        transform: scale(1.1);
-    }
-    
- 
-    .testimonial-card {
-        background-color: rgba(0, 0, 0, 0.3); /* Темный фон с прозрачностью */
-        color: white; /* Белый текст */
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
+:root {
+    --primary-color: #1a6b8a;
+    --secondary-color: #0d4b63;
+    --accent-color: #f8b400;
+    --light-color: #f5f5f5;
+    --dark-color: #333;
+}
 
-    
-    .testimonial-img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--accent-color);
-    }
-    
-    .contact-form {
-        background: white;
-        border-radius: 10px;
-        padding: 40px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-    
-    footer {
-        background-color: var(--dark-color);
-        color: white;
-        padding: 50px 0 20px;
-    }
-    
-    .social-icon {
-        color: white;
-        font-size: 1.5rem;
-        margin-right: 15px;
-        transition: all 0.3s;
-    }
-    
-    .social-icon:hover {
-        color: var(--accent-color);
-        transform: translateY(-5px);
-    }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
 
+.bg-primary-custom {
+    background-color: var(--primary-color);
+}
 
-    /* Стили для стеклянных карточек */
+.bg-secondary-custom {
+    background-color: var(--secondary-color);
+}
 
+.text-accent {
+    color: var(--accent-color);
+}
+
+.btn-custom {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #e0a800;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    transition: all 0.3s;
+    padding: 15px 0;
+}
+
+.navbar.scrolled {
+    padding: 10px 0;
+    background-color: rgba(26, 107, 138, 0.9) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(13, 75, 99, 0.2), rgba(13, 75, 99, 0.1)), 
+                url('images/core.jpg') center/cover no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+/* Стили для стеклянных карточек */
 .glass-card {
     position: relative;
     padding: 30px 20px;
     border-radius: 15px;
-    background: #1a6b8a;
+    background: rgba(13, 75, 99, 1); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -157,13 +84,12 @@
     z-index: 1;
 }
 
-\* Эффект при наведении \*
-.glass-card\:hover {
+.glass-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.2);
 }
 
-\* Иконки внутри карточек \*
+/* Иконки внутри карточек */
 .feature-icon {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -171,18 +97,17 @@
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-\* Текст внутри карточек \*
-  .glass-card h4 {
-      color: #fff;
-      margin-bottom: 15px;
-      font-weight: 600;
+/* Текст внутри карточек */
+.glass-card h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .glass-card p {
     color: rgba(255, 255, 255, 0.8);
 }
 
-\* Дополнительный элемент для усиления эффекта стекла \*
 .glass-card::before {
     content: '';
     position: absolute;
@@ -195,14 +120,13 @@
     z-index: -1;
 }
 
-\* Фон секции должен быть не однотонным для лучшего эффекта \*
 .bg-light {
-    background: linear-gradient(135deg, #0d4b63, #0d4b63);
+    background: linear-gradient(135deg, #0d4b63, #0a3a4d);
     background-attachment: fixed;
 }
 
-.glass-card\:hover::before {
-    background : linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+.glass-card:hover::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
 }
 
 .dark-mode .glass-card {
@@ -211,11 +135,67 @@
 }
 
 @supports not (backdrop-filter: blur(10px)) {
-.glass-card {
-  background: rgba(255, 255, 255, 0.8);
-}
+    .glass-card {
+        background: rgba(26, 107, 138, 0.9); 
+    }
 }
 
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    transition: all 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.testimonial-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+.contact-form {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* Модальное окно обратной связи */
 .callback-modal {
     display: none;
     position: fixed;
@@ -230,131 +210,131 @@
 }
 
 .modal-content {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  position: relative;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
 }
 
 .close-modal {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.callbackForm {
-  display: flex;
-  flex-direction: column;
+#callbackForm {
+    display: flex;
+    flex-direction: column;
 }
 
-.callbackForm input {
-margin-bottom: 15px;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 5px;
+#callbackForm input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.callbackForm button {
-  background: #ff6600;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+#callbackForm button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
+/* Плавающая кнопка контактов */
 .contact-floating {
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  z-index: 1000;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 1000;
 }
 
-.contact-floating\_\_main {
-  background: #f8b400;
-  border: none;
-  border-radius: 50%;
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s;
+.contact-floating__main {
+    background: #f8b400;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
 }
 
-.contact-floating\_\_main svg {
-  width: 24px;
-  height: 24px;
-  fill: white;
+.contact-floating__main svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
 }
 
-.contact-floating\_\_main\:active {
-  transform: scale(0.95);
+.contact-floating__main:active {
+    transform: scale(0.95);
 }
 
-.contact-floating\_\_hidden {
-  display: none;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 15px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s, transform 0.3s;
+.contact-floating__hidden {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
 }
 
-.contact-floating\_\_hidden.show {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0);
+.contact-floating__hidden.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.contact-floating\_\_btn {
-  background: #555;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, background 0.2s;
-  cursor: pointer;
-  padding: 0;
+.contact-floating__btn {
+    background: #555;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.2s;
+    cursor: pointer;
+    padding: 0;
 }
 
-.contact-floating\_\_btn svg {
-  width: 30x;
-  height: 30px;
-  fill: white;
+.contact-floating__btn svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
 }
 
-.contact-floating\_\_btn\:active {
-  transform: scale(0.95);
-  background: #444;
-  }
-
+.contact-floating__btn:active {
+    transform: scale(0.95);
+    background: #444;
+}
 
 @media (max-width: 480px) {
-.contact-floating {
-  bottom: 15px;
-  right: 15px;
-  }
+    .contact-floating {
+        bottom: 15px;
+        right: 15px;
+    }
 
-.contact-floating\_\_main {
-  width: 50px;
-  height: 50px;
-  }
+    .contact-floating__main {
+        width: 50px;
+        height: 50px;
+    }
 
-.contact-floating\_\_btn {
-  width: 44px;
-  height: 44px;
-  }
+    .contact-floating__btn {
+        width: 44px;
+        height: 44px;
+    }
 }
