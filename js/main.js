@@ -29,7 +29,7 @@
     }
   }
 
-  domReady(function () {
+ domReady(function () {
     const mainBtn = document.getElementById('contactMainBtn');
     const hiddenBtns = document.getElementById('contactHiddenBtns');
     const jivoBtn = document.getElementById('jivoChatButton');
@@ -37,61 +37,89 @@
     const modal = document.getElementById('callbackModal');
     const closeBtn = document.querySelector('.close-modal');
     const callbackForm = document.getElementById('callbackForm');
+    let jivoWidgetVisible = false;
 
     // Показ/скрытие скрытых кнопок
     mainBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      hiddenBtns.classList.toggle('show');
+        e.stopPropagation();
+        hiddenBtns.classList.toggle('show');
     });
 
     document.addEventListener('click', () => {
-      hiddenBtns.classList.remove('show');
+        hiddenBtns.classList.remove('show');
     });
 
-    // Загрузка и открытие JivoChat при клике
-    jivoBtn.addEventListener('click', () => {
-      if (typeof jivo_api !== 'undefined') {
-        jivo_api.open();
-      } else {
+    // Функция для управления JivoChat
+    function toggleJivoChat() {
+        if (typeof jivo_api !== 'undefined') {
+            if (jivoWidgetVisible) {
+                jivo_api.close();
+            } else {
+                jivo_api.open();
+            }
+            jivoWidgetVisible = !jivoWidgetVisible;
+        } else {
+            loadJivoChat();
+        }
+    }
+
+    // Функция загрузки JivoChat
+    function loadJivoChat() {
         const script = document.createElement('script');
         script.src = "//code.jivosite.com/widget/Hswl9k6ISZ";
         script.async = true;
         script.onload = () => {
-          if (typeof jivo_api !== 'undefined') {
-            jivo_api.open();
-          } else {
-            console.warn('JivoChat загружен, но API пока не доступен');
-          }
+            if (typeof jivo_api !== 'undefined') {
+                jivo_api.open();
+                jivoWidgetVisible = true;
+                
+                // Добавляем обработчик для стандартной кнопки Jivo
+                const jivoWidgetBtn = document.querySelector('.jivo-widget-btn');
+                if (jivoWidgetBtn) {
+                    jivoWidgetBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        toggleJivoChat();
+                    });
+                }
+            } else {
+                console.warn('JivoChat загружен, но API пока не доступен');
+            }
         };
         document.body.appendChild(script);
-      }
-      hiddenBtns.classList.remove('show');
+    }
+
+    // Обработчик клика по кнопке JivoChat
+    jivoBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleJivoChat();
+        hiddenBtns.classList.remove('show');
     });
 
     // Открытие окна обратного звонка
     callbackBtn.addEventListener('click', () => {
-      modal.style.display = 'flex';
-      hiddenBtns.classList.remove('show');
+        modal.style.display = 'flex';
+        hiddenBtns.classList.remove('show');
     });
 
     // Закрытие модалки по крестику
     closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
+        modal.style.display = 'none';
     });
 
     // Закрытие модалки по фону
     window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
     });
 
     // Обработка формы обратного звонка
     callbackForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Спасибо! Мы скоро вам перезвоним.');
-      modal.style.display = 'none';
+        e.preventDefault();
+        alert('Спасибо! Мы скоро вам перезвоним.');
+        modal.style.display = 'none';
     });
-  });
+});
+
 
   

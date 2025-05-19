@@ -84,6 +84,9 @@ body {
     z-index: 1;
 }
 
+
+
+
 .glass-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.2);
@@ -140,6 +143,9 @@ body {
     }
 }
 
+
+
+
 .gallery-item {
     overflow: hidden;
     border-radius: 10px;
@@ -182,6 +188,7 @@ footer {
     color: white;
     padding: 50px 0 20px;
 }
+
 
 .social-icon {
     color: white;
@@ -252,7 +259,7 @@ footer {
 .contact-floating {
     position: fixed;
     bottom: 40px;
-    right: 20px;
+    left: 20px;
     z-index: 1000;
 }
 
@@ -338,3 +345,6 @@ footer {
         height: 44px;
     }
 }
+
+
+
